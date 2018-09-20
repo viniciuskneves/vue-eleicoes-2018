@@ -48,16 +48,21 @@ export default new Vuex.Store({
         const data = await api.listPresidentes();
         const candidatos = data.candidatos.map((candidato) => {
           const {
-            id, nomeCompleto, nomeUrna, nomeColigacao, numero, descricaoSituacao,
-          } = candidato;
-
-          return {
             id,
-            nomeCompleto,
             nomeUrna,
             nomeColigacao,
             numero,
             descricaoSituacao,
+            partido: { sigla },
+          } = candidato;
+
+          return {
+            id,
+            nomeUrna,
+            nomeColigacao,
+            numero,
+            descricaoSituacao,
+            sigla,
           };
         });
 
