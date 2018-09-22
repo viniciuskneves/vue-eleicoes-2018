@@ -7,13 +7,15 @@
 <script>
 export default {
   name: 'AppHeader',
-}
+};
 </script>
 
 <style scoped>
 h1 {
   overflow: hidden;
-  background-image: linear-gradient(to bottom,#2ed72a 0%,#2ed72a 40%,#ebff39 40%,#ebff39 80%,#fff 80%,#fff 100%);
+  background-image: linear-gradient(
+    to bottom,#2ed72a 0%,#2ed72a 40%,#ebff39 40%,#ebff39 80%,#fff 80%,#fff 100%
+  );
   font-size: 4rem;
 }
 

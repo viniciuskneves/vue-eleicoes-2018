@@ -25,7 +25,7 @@ import { mapState } from 'vuex';
 export default {
   name: 'CandidatosList',
   computed: mapState(['candidatos']),
-}
+};
 </script>
 
 <style scoped>

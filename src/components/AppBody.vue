@@ -4,10 +4,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 import Loading from './Loading.vue';
 import CandidatosList from './CandidatosList.vue';
-
-import { mapState } from 'vuex';
 
 export default {
   name: 'AppBody',
@@ -18,7 +18,7 @@ export default {
   computed: mapState({
     loading: state => !state.candidatos.length,
   }),
-}
+};
 </script>
 
 <style>

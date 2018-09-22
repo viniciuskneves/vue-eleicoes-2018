@@ -12,8 +12,10 @@ export default new Vuex.Store({
   mutations: {
     SET_CANDIDATOS(state, candidatos) {
       console.log({ candidatos });
-      
-      state.candidatos = candidatos.filter(candidato => candidato.descricaoSituacao === 'Deferido');
+
+      const availableCandidatos = candidatos.filter(candidato => candidato.descricaoSituacao === 'Deferido');
+
+      Vue.set(state, 'candidatos', availableCandidatos);
     },
     SET_CANDIDATO_PHOTO(state, { id, photoUrl }) {
       console.log({ id, photoUrl });
@@ -72,6 +74,6 @@ export default new Vuex.Store({
       } catch (e) {
         console.error(e);
       }
-    }
+    },
   },
 });
