@@ -8,7 +8,7 @@
       >
         <div class="image">
           <Loading v-if="!candidato.photoUrl" />
-          <img 
+          <img
             v-else
             :src="candidato.photoUrl"
           />
