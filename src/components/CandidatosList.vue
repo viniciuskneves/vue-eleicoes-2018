@@ -6,8 +6,12 @@
         v-for="candidato in candidatos"
         :key="candidato.id"
       >
-        <div>
-          <img :src="candidato.photoUrl" />
+        <div class="image">
+          <Loading v-if="!candidato.photoUrl" />
+          <img 
+            v-else
+            :src="candidato.photoUrl"
+          />
         </div>
         <div class="content">
           <span class="candidato-number">{{ candidato.numero }}</span>
@@ -22,8 +26,11 @@
 <script>
 import { mapState } from 'vuex';
 
+import Loading from './Loading.vue';
+
 export default {
   name: 'CandidatosList',
+  components: { Loading },
   computed: mapState(['candidatos']),
 };
 </script>
@@ -51,6 +58,10 @@ h3 {
 .content {
   flex-grow: 2;
   padding: 10px;
+}
+
+.image {
+  align-self: center;
 }
 
 .candidato-number {
