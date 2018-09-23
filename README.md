@@ -26,3 +26,11 @@ npm run lint
 ```
 npm run test:unit
 ```
+
+## Deploy
+It will automatically build and deploy `./dist` folder to [Surge](https://surge.sh) under `CNAME` file domain.
+```
+npm run deploy
+```
+
+*The default domain in `vue-eleicoes-2018.surge.sh` and all HTTPS accesses will be redirected to HTTP as the API is only available in HTTP.*
