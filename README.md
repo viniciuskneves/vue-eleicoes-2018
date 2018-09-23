@@ -2,22 +2,22 @@
 
 Projeto 100% inspirado por [Eleições 2018 de Diogo Moretti](https://github.com/diogomoretti/eleicoes2018).
 
-## Setup do projeto
+## Setup
 ```
 npm install
 ```
 
-### Desenvolvimento
+### Running - Development
 ```
 npm run serve
 ```
 
-### Produção
+### Build - Production
 ```
 npm run build
 ```
 
-### Lint dos arquivos
+### Linting
 ```
 npm run lint
 ```
