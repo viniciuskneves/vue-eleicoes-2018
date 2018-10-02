@@ -24,14 +24,21 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-
 import Loading from './Loading.vue';
 
 export default {
   name: 'CandidatosList',
-  components: { Loading },
-  computed: mapState(['candidatos']),
+
+  components: {
+    Loading,
+  },
+
+  props: {
+    candidatos: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
 
