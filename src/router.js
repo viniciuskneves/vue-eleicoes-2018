@@ -16,14 +16,17 @@ export default new Router({
     },
     {
       path: '/presidentes',
+      name: 'Presidentes',
       component: CandidatosList,
     },
     {
       path: '/governadores',
+      name: 'Governadores',
       component: GovernadoresList,
     },
     {
       path: '/federais',
+      name: 'Deputados Federais',
       component: FederaisList,
     },
     {
