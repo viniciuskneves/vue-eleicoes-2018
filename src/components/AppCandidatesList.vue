@@ -1,24 +1,18 @@
 <template>
-  <div>
-    <h1>PRESIDENTES</h1>
-    <ul>
-      <li
-        v-for="candidato in candidatos"
-        :key="candidato.id">
-        <div class="image">
-          <app-loading v-if="!candidato.photoUrl"/>
-          <img
-            v-else
-            :src="candidato.photoUrl">
-        </div>
-        <div class="content">
-          <span class="candidato-number">{{ candidato.numero }}</span>
-          <h2>{{ candidato.nomeUrna }}</h2>
-          <h3>{{ candidato.sigla }} - {{ candidato.nomeColigacao }}</h3>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li
+      v-for="candidate in candidates"
+      :key="candidate.id">
+      <div class="image">
+        <img :src="candidate.fotoUrl">
+      </div>
+      <div class="content">
+        <span class="candidato-number">{{ candidate.numero }}</span>
+        <h2>{{ candidate.nomeUrna }}</h2>
+        <h3>{{ candidate.sigla }} - {{ candidate.nomeColigacao }}</h3>
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -32,7 +26,7 @@ export default {
   },
 
   props: {
-    candidatos: {
+    candidates: {
       type: Array,
       required: true,
     },

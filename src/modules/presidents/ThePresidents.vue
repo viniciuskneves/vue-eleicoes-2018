@@ -2,7 +2,7 @@
   <div>
     <app-loading v-if="!hasCandidates"/>
     <app-candidates-list
-      :candidatos="candidatos"
+      :candidates="candidates"
       v-else/>
   </div>
 </template>
