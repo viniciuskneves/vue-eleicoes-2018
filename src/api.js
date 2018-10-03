@@ -30,7 +30,7 @@ const getCandidatesList = async (type, state = 'PE') => {
   }
 };
 
-const getCandidatePhoto = async (id, state = 'BR') => {
+const getCandidate = async (id, state = 'BR') => {
   const url = `${API_BASE_URL}/buscar/2018/${state}/2022802018/candidato/${id}`;
 
   try {
@@ -41,4 +41,4 @@ const getCandidatePhoto = async (id, state = 'BR') => {
   }
 };
 
-export { getCandidatesList, getCandidatePhoto };
+export { getCandidatesList, getCandidate };

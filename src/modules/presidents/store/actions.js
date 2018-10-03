@@ -1,4 +1,4 @@
-import { getCandidatesList, getCandidatePhoto } from '@/api';
+import { getCandidatesList, getCandidate } from '@/api';
 
 const FETCH_PHOTOS = async ({ state, commit }) => {
   try {
