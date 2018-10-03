@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import ThePresidents from '@/modules/presidents/ThePresidents.vue';
+import ThePresidents from '@/views/ThePresidents.vue';
 
 Vue.use(Router);
 
