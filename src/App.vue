@@ -18,9 +18,6 @@ export default {
     AppBody,
     AppFooter,
   },
-  created() {
-    this.$store.dispatch('FETCH_DATA');
-  },
 };
 </script>
 
