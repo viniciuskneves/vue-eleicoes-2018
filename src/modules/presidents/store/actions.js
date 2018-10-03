@@ -1,9 +1,9 @@
-import api from '@/api';
+import { getCandidatesList, getCandidatePhoto } from '@/api';
 
 const FETCH_PHOTOS = async ({ state, commit }) => {
   try {
     const { candidatos } = state;
-    const promises = candidatos.map(_ => api.getPresidente(_.id));
+    const promises = candidatos.map(_ => getCandidatePhoto(_.id));
 
     const data = await Promise.all(promises);
 
@@ -20,7 +20,7 @@ const FETCH_PHOTOS = async ({ state, commit }) => {
 
 const FETCH_DATA = async ({ commit, dispatch }) => {
   try {
-    const data = await api.listPresidentes();
+    const data = await getCandidatesList();
     const candidatos = data.candidatos.map((candidato) => {
       const {
         id,
