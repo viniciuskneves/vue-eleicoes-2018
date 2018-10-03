@@ -1,15 +1,14 @@
-<!-- Based on https://codepen.io/Manoz/pen/pydxK -->
 <template>
   <div class="load">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+    <div class="line">&nbsp;</div>
+    <div class="line">&nbsp;</div>
+    <div class="line">&nbsp;</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Loading',
+  name: 'AppLoading',
 };
 </script>
 
@@ -43,7 +42,7 @@ export default {
 }
 
 @keyframes loading {
-    0 {transform: translate(0,0);}
+    0% {transform: translate(0,0);}
     50% {transform: translate(0,15px);}
     100% {transform: translate(0,0);}
 }

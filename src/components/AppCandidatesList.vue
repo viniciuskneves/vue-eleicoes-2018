@@ -4,14 +4,12 @@
     <ul>
       <li
         v-for="candidato in candidatos"
-        :key="candidato.id"
-      >
+        :key="candidato.id">
         <div class="image">
-          <Loading v-if="!candidato.photoUrl" />
+          <app-loading v-if="!candidato.photoUrl"/>
           <img
             v-else
-            :src="candidato.photoUrl"
-          />
+            :src="candidato.photoUrl">
         </div>
         <div class="content">
           <span class="candidato-number">{{ candidato.numero }}</span>
@@ -24,13 +22,13 @@
 </template>
 
 <script>
-import Loading from './Loading.vue';
+import AppLoading from './AppLoading.vue';
 
 export default {
-  name: 'CandidatosList',
+  name: 'AppCandidatesList',
 
   components: {
-    Loading,
+    AppLoading,
   },
 
   props: {

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <loading v-if="!hasCandidates"/>
-    <candidatos-list
+    <app-loading v-if="!hasCandidates"/>
+    <app-candidates-list
       :candidatos="candidatos"
       v-else/>
   </div>
@@ -9,15 +9,15 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import Loading from '@/components/Loading.vue';
-import CandidatosList from '@/components/CandidatosList.vue';
+import AppLoading from '@/components/AppLoading.vue';
+import AppCandidatesList from '@/components/AppCandidatesList.vue';
 
 export default {
   name: 'ThePresidents',
 
   components: {
-    Loading,
-    CandidatosList,
+    AppLoading,
+    AppCandidatesList,
   },
 
   computed: {
