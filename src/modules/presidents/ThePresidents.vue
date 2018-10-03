@@ -21,19 +21,19 @@ export default {
   },
 
   computed: {
-    ...mapState('presidents', ['candidatos']),
+    ...mapState('presidents', ['candidates']),
 
     hasCandidates() {
-      return !!this.candidatos.length;
+      return !!this.candidates.length;
     },
   },
 
   methods: {
-    ...mapActions('presidents', ['FETCH_DATA']),
+    ...mapActions('presidents', ['fetchPayload']),
   },
 
   created() {
-    this.FETCH_DATA();
+    this.fetchPayload();
   },
 };
 </script>

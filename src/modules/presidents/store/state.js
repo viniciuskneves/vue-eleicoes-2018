@@ -1,5 +1,5 @@
 const state = {
-  candidatos: [],
+  candidates: [],
 };
 
 export default state;
