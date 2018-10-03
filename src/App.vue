@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <AppMenu />
+    <app-menu />
     <AppBody />
     <AppFooter />
   </div>
