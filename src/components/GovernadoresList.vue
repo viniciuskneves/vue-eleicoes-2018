@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>PRESIDENTES</h1>
+    <h1>GOVERNADORES</h1>
     <ul>
       <li
         v-for="candidato in candidatos"
@@ -30,11 +30,11 @@ import Loading from './Loading.vue';
 import types from '../types';
 
 export default {
-  name: 'CandidatosList',
+  name: 'GovernadoresList',
   components: { Loading },
   computed: mapState(['candidatos']),
   created() {
-    this.$store.dispatch('FETCH_DATA', { state: 'BR', type: types.presidente });
+    this.$store.dispatch('FETCH_DATA', { state: 'SP', type: types.governador });
   },
 };
 </script>

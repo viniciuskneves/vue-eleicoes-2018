@@ -10,6 +10,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppBody from './components/AppBody.vue';
 import AppFooter from './components/AppFooter.vue';
+import types from './types';
 
 export default {
   name: 'App',
@@ -19,7 +20,7 @@ export default {
     AppFooter,
   },
   created() {
-    this.$store.dispatch('FETCH_DATA');
+    this.$store.dispatch('FETCH_DATA', { state: 'BR', type: types.presidente });
   },
 };
 </script>
