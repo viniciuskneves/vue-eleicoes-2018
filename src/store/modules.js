@@ -1,4 +1,4 @@
-import presidents from '@/modules/presidents/store';
+import presidents from './presidents';
 
 const modules = {
   presidents,
