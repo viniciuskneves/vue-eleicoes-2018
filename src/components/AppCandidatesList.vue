@@ -9,7 +9,7 @@
       <div class="content">
         <span class="candidato-number">{{ candidate.numero }}</span>
         <h2>{{ candidate.nomeUrna }}</h2>
-        <h3>{{ candidate.sigla }} - {{ candidate.nomeColigacao }}</h3>
+        <h3>{{ candidate.eleicoesAnteriores[0].partido }} - {{ candidate.nomeColigacao }}</h3>
       </div>
     </li>
   </ul>
