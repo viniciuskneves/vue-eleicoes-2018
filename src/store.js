@@ -7,6 +7,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    state: 'BR',
     candidatos: [],
   },
   mutations: {
@@ -26,12 +27,16 @@ export default new Vuex.Store({
         Vue.set(candidato, 'photoUrl', photoUrl);
       }
     },
+    SET_STATE(state, _state) {
+      Vue.set(state, 'state', _state);
+    },
   },
   actions: {
     async FETCH_PHOTOS({ state, commit }) {
       try {
         const { candidatos } = state;
-        const promises = candidatos.map(_ => api.getPresidente(_.id));
+
+        const promises = candidatos.map(_ => api.getCandidato(_.id, state.state));
 
         const data = await Promise.all(promises);
 
@@ -45,9 +50,11 @@ export default new Vuex.Store({
         console.error(e);
       }
     },
-    async FETCH_DATA({ commit, dispatch }) {
+    async FETCH_DATA({ commit, dispatch }, { state, type }) {
+      commit('SET_STATE', state);
+
       try {
-        const data = await api.listPresidentes();
+        const data = await api.listCandidatos(state, type);
         const candidatos = data.candidatos.map((candidato) => {
           const {
             id,

@@ -2,7 +2,7 @@
   <div>
     <Loading v-if="!candidatos.length" />
     <div v-else>
-      <h1>PRESIDENTES</h1>
+      <h1>DEPUTADOS FEDERAIS</h1>
       <ul>
         <li
           v-for="candidato in candidatos"
@@ -32,11 +32,11 @@ import Loading from './Loading.vue';
 import types from '../types';
 
 export default {
-  name: 'CandidatosList',
+  name: 'FederaisList',
   components: { Loading },
   computed: mapState(['candidatos']),
-  mounted() {
-    this.$store.dispatch('FETCH_DATA', { state: 'BR', type: types.presidente });
+  created() {
+    this.$store.dispatch('FETCH_DATA', { state: 'SC', type: types.federal });
   },
 };
 </script>
@@ -45,31 +45,25 @@ export default {
 h1 {
   text-align: center;
 }
-
 ul {
   list-style: none;
 }
-
 li {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-
 h3 {
   color: #aaa;
   font-weight: normal;
 }
-
 .content {
   flex-grow: 2;
   padding: 10px;
 }
-
 .image {
   align-self: center;
 }
-
 .candidato-number {
   background: #2f4858;
   font-size: 2rem;
@@ -78,7 +72,6 @@ h3 {
   border-radius: 5px;
   padding: 0.2em 0.5em;
 }
-
 img {
   filter: grayscale(100%);
   border-radius: 20px;
