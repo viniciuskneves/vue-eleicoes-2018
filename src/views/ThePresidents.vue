@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <app-loading v-if="!hasCandidates"/>
-    <app-candidates-list
-      :candidates="candidates"
-      v-else/>
+  <app-loading v-if="!hasCandidates"/>
+  <div v-else>
+    <h1>PRESIDENTES</h1>
+    <app-candidates-list :candidates="candidates"/>
   </div>
 </template>
 
@@ -37,3 +36,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+}
+</style>
+
