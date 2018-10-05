@@ -14,6 +14,7 @@ export default new Router({
     },
     {
       path: '/presidentes',
+      name: 'Presidentes',
       component: ThePresidents,
     },
     {
