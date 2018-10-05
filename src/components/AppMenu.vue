@@ -1,7 +1,11 @@
 <template>
   <nav class="menu">
-    <div :key="route.path" v-for="route in routes">
-      <router-link class="route" :to="route.path">
+    <div
+      :key="route.path"
+      v-for="route in routes">
+      <router-link
+        class="route"
+        :to="route.path">
         {{ route.name }}
       </router-link>
     </div>
