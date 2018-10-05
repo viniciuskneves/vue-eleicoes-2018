@@ -1,28 +1,24 @@
 <template>
   <div>
-    <AppHeader />
+    <app-header/>
     <app-menu />
-    <AppBody />
-    <AppFooter />
+    <router-view/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMenu from './components/AppMenu.vue';
-import AppBody from './components/AppBody.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
+
   components: {
     AppHeader,
     AppMenu,
-    AppBody,
     AppFooter,
-  },
-  created() {
-    this.$store.dispatch('FETCH_DATA');
   },
 };
 </script>

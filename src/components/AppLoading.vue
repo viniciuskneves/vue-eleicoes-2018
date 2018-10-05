@@ -1,15 +1,14 @@
-<!-- Based on https://codepen.io/Manoz/pen/pydxK -->
 <template>
   <div class="load">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+    <div class="line">&nbsp;</div>
+    <div class="line">&nbsp;</div>
+    <div class="line">&nbsp;</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Loading',
+  name: 'AppLoading',
 };
 </script>
 
