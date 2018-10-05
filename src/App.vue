@@ -1,6 +1,7 @@
 <template>
   <div>
     <app-header/>
+    <app-menu />
     <router-view/>
     <app-footer/>
   </div>
@@ -8,6 +9,7 @@
 
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppMenu from './components/AppMenu.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
@@ -15,6 +17,7 @@ export default {
 
   components: {
     AppHeader,
+    AppMenu,
     AppFooter,
   },
 };
