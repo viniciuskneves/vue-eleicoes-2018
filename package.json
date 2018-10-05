@@ -1,7 +1,23 @@
 {
   "name": "vue-eleicoes-2018",
   "version": "0.1.0",
-  "private": true,
+  "description": "Lista de candidatos para eleições 2018",
+  "keywords": [
+    "vue",
+    "eleicoes",
+    "vuejs"
+  ],
+  "homepage": "http://vue-eleicoes-2018.surge.sh",
+  "bugs": "https://github.com/viniciuskneves/vue-eleicoes-2018/issues",
+  "license": "MIT",
+  "author": "Vinicius Kiatkoski Neves <kneves.vinicius@gmail.com> (https://github.com/viniciuskneves)",
+  "contributors": [
+    "Michael Santillán <me@michaelsantillan.com> (https://www.michaelsantillan.com)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viniciuskneves/vue-eleicoes-2018"
+  },
   "scripts": {
     "serve": "vue-cli-service serve --copy",
     "build": "vue-cli-service build --modern",
