@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import CandidatosList from './components/CandidatosList.vue';
 
 Vue.use(Router);
 
@@ -15,7 +14,7 @@ export default new Router({
     {
       path: '/presidentes',
       name: 'Presidentes',
-      component: CandidatosList,
+      component: ThePresidents,
     },
     {
       path: '*',

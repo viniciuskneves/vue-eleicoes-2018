@@ -1,16 +1,15 @@
 <template>
   <div>
-    <AppHeader />
-    <app-menu />
-    <AppBody />
-    <AppFooter />
+    <app-header/>
+    <app-menu/>
+    <router-view/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMenu from './components/AppMenu.vue';
-import AppBody from './components/AppBody.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
@@ -18,7 +17,6 @@ export default {
   components: {
     AppHeader,
     AppMenu,
-    AppBody,
     AppFooter,
   },
   created() {
