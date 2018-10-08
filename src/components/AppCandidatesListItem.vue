@@ -1,5 +1,5 @@
 <template>
-  <div class="teste">
+  <div class="candidate-list-item">
     <app-loading v-if="!hasPhoto" />
     <div
       class="image"
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style scoped>
-.teste {
+.candidate-list-item {
   display: flex;
   flex-wrap: wrap;
 }
