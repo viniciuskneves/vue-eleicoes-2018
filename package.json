@@ -22,7 +22,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --copy",
     "build": "vue-cli-service build --modern",
-    "deploy": "npm run build && cp CNAME ./dist && cd ./dist && npx surge && cd ..",
+    "deploy": "npm run build && cp CNAME ./dist && cd ./dist && cp index.html 200.html && npx surge && cd ..",
     "lint": "eclint check $(git ls-files) && vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
