@@ -11,7 +11,6 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMenu from './components/AppMenu.vue';
 import AppFooter from './components/AppFooter.vue';
-import types from './types';
 
 export default {
   name: 'App',
