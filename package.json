@@ -24,6 +24,7 @@
     "build": "vue-cli-service build --modern",
     "deploy": "npm run build && cp CNAME ./dist && cd ./dist && cp index.html 200.html && npx surge && cd ..",
     "lint": "eclint check $(git ls-files) && vue-cli-service lint",
+    "lint:ci": "eclint check $(git ls-files) && vue-cli-service lint --no-fix",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
