@@ -9,4 +9,4 @@ branches:
 jobs:
   include:
     - stage: "Lint"
-      script: npm run lint
+      script: npm run lint:ci
