@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import ThePresidents from '@/views/ThePresidents.vue';
 import TheFederal from '@/views/TheFederal.vue';
+import TheStateRepresentatives from '@/views/TheStateRepresentatives.vue';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/federais',
       name: 'Dep. Federais',
       component: TheFederal,
+    },
+    {
+      path: '/estaduais',
+      name: 'Dep. Estaduais',
+      component: TheStateRepresentatives,
     },
     {
       path: '*',
