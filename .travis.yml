@@ -8,5 +8,5 @@ branches:
 
 jobs:
   include:
-    - stage: "Lint" # naming the Tests stage
+    - stage: "Lint"
       script: npm run lint --no-fix
