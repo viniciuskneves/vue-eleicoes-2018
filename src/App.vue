@@ -1,26 +1,25 @@
 <template>
   <div>
-    <AppHeader />
-    <AppBody />
-    <AppFooter />
+    <app-header/>
+    <app-menu/>
+    <router-view/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppBody from './components/AppBody.vue';
+import AppMenu from './components/AppMenu.vue';
 import AppFooter from './components/AppFooter.vue';
 import types from './types';
 
 export default {
   name: 'App',
+
   components: {
     AppHeader,
-    AppBody,
+    AppMenu,
     AppFooter,
-  },
-  created() {
-    this.$store.dispatch('FETCH_DATA', { state: 'BR', type: types.presidente });
   },
 };
 </script>

@@ -1,12 +1,29 @@
 {
   "name": "vue-eleicoes-2018",
   "version": "0.1.0",
-  "private": true,
+  "description": "Lista de candidatos para eleições 2018",
+  "keywords": [
+    "vue",
+    "eleicoes",
+    "vuejs"
+  ],
+  "homepage": "http://vue-eleicoes-2018.surge.sh",
+  "bugs": "https://github.com/viniciuskneves/vue-eleicoes-2018/issues",
+  "license": "MIT",
+  "author": "Vinicius Kiatkoski Neves <kneves.vinicius@gmail.com> (https://github.com/viniciuskneves)",
+  "contributors": [
+    "Michael Santillán <me@michaelsantillan.com> (https://www.michaelsantillan.com)",
+    "Vinicius Meneses <vini23hot@gmail.com> (http://viniciusmeneses.github.io/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viniciuskneves/vue-eleicoes-2018"
+  },
   "scripts": {
     "serve": "vue-cli-service serve --copy",
     "build": "vue-cli-service build --modern",
-    "deploy": "npm run build && cp CNAME ./dist && cd ./dist && npx surge && cd ..",
-    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && cp CNAME ./dist && cd ./dist && cp index.html 200.html && npx surge && cd ..",
+    "lint": "eclint check $(git ls-files) && vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
@@ -24,6 +41,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
+    "eclint": "2.8.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "surge": "0.20.1",

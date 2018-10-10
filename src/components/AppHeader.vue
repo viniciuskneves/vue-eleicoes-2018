@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 h1 {
+  margin-bottom: 0.1em;
   overflow: hidden;
   background-image: linear-gradient(
     to bottom,#2ed72a 0%,#2ed72a 40%,#ebff39 40%,#ebff39 80%,#fff 80%,#fff 100%
