@@ -1,11 +1,11 @@
 import presidents from './presidents';
 import federal from './federal';
-import stateRepresentative from './stateRepresentative';
+import state from './state';
 
 const modules = {
   presidents,
   federal,
-  stateRepresentative,
+  state,
 };
 
 export default modules;

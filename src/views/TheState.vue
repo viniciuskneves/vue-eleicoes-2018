@@ -12,7 +12,7 @@ import AppLoading from '@/components/AppLoading.vue';
 import AppCandidatesList from '@/components/AppCandidatesList.vue';
 
 export default {
-  name: 'TheStateRepresentatives',
+  name: 'TheState',
 
   components: {
     AppLoading,
@@ -20,7 +20,7 @@ export default {
   },
 
   computed: {
-    ...mapState('stateRepresentative', ['candidates']),
+    ...mapState('state', ['candidates']),
 
     hasCandidates() {
       return !!this.candidates.length;
@@ -28,7 +28,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('stateRepresentative', ['fetchPayload']),
+    ...mapActions('state', ['fetchPayload']),
   },
 
   created() {
