@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "node"
+
+branches:
+  only:
+    - master
+
+jobs:
+  include:
+    - stage: "Lint"
+      script: npm run lint:ci
